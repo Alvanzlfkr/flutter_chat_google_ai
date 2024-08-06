@@ -4,7 +4,8 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 
 const apiKey = 'AIzaSyAcQB9uol3yreaLo87_7FZ5xQ0QtFepC2M';
 
-void main() { //async {
+void main() {
+  //async {
 //   final model = GenerativeModel(
 //     model: 'gemini-1.5-flash-latest',
 //     apiKey: apiKey,
@@ -29,8 +30,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         // Konfigurasi tema aplikasi
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 118, 39, 255)),
         useMaterial3: true, // Mengaktifkan Material Design 3
+        scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
       home: const ChatPage(), // Halaman utama aplikasi
     );

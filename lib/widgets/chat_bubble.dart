@@ -44,13 +44,15 @@ class ChatBubble extends StatelessWidget {
           margin: EdgeInsets.symmetric(vertical: 4),
           decoration: BoxDecoration(
             borderRadius: _borderRadius(direction, type),
-            color: isOnLeft ? Colors.grey[200] : Theme.of(context).primaryColor,
+            color: isOnLeft
+                ? Color.fromARGB(255, 93, 93, 93)
+                : Theme.of(context).primaryColor,
           ),
           child: Text(
             message,
             style: TextStyle(
               fontWeight: FontWeight.w400,
-              color: isOnLeft ? Colors.black : Colors.white,
+              color: isOnLeft ? Colors.white : Colors.white,
             ),
           ),
         ),

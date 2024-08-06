@@ -36,12 +36,12 @@ class _ChatPageState extends State<ChatPage> {
         leading: CupertinoButton(
           child: const Icon(
             Icons.arrow_back_ios,
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: Colors.white,
           ),
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text('Your Assistant AI',
-            style: TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
+            style: TextStyle(color: Colors.white)),
         backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
       body: Column(
@@ -62,8 +62,19 @@ class _ChatPageState extends State<ChatPage> {
                 Expanded(
                   child: TextField(
                     controller: messageController,
+                    style: const TextStyle(
+                        color: Colors.white), // Set text color to white
                     decoration: const InputDecoration(
                       hintText: 'Type a message...',
+                      hintStyle: TextStyle(
+                          color: Color.fromARGB(179, 196, 195,
+                              195)), // Set hint text color to a lighter shade of white
+                      filled: true,
+                      fillColor: Color.fromARGB(255, 77, 77, 77),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                        borderSide: BorderSide.none,
+                      ),
                     ),
                   ),
                 ),
